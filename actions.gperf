@@ -1,0 +1,23 @@
+%{
+#include "game.h"
+%}
+%includes
+%language=ANSI-C
+%define slot_name text
+%readonly-tables
+%ignore-case
+%define initializer-suffix ,-1
+%define lookup-function-name game_action_lookup
+struct game_action_entry;
+%%
+exit, GAME_ACTION_EXIT
+help, GAME_ACTION_HELP
+read, GAME_ACTION_READ
+open, GAME_ACTION_OPEN
+eat, GAME_ACTION_EAT
+inspect, GAME_ACTION_INSPECT
+pick, GAME_ACTION_PICK
+talk, GAME_ACTION_TALK
+knock, GAME_ACTION_KNOCK
+reflect, GAME_ACTION_REFLECT
+%%
